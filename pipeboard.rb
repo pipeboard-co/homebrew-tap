@@ -5,20 +5,20 @@
 class Pipeboard < Formula
   desc "CLI for managing Meta, Google, and TikTok Ads via Pipeboard"
   homepage "https://github.com/pipeboard-co/pipeboard-cli"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.1.0/pipeboard_darwin_amd64.tar.gz"
-      sha256 "16958ac3554dcc1c7bbfe45ca14e03d0e63039437a46ca827e6cb5ad52d7a0a5"
+      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.2.0/pipeboard_darwin_amd64.tar.gz"
+      sha256 "fd1b1dd41a1f58df7754f623792ac46b5435c267595b7d1492cbbd8773804903"
 
       define_method(:install) do
         bin.install "pipeboard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.1.0/pipeboard_darwin_arm64.tar.gz"
-      sha256 "163ce6d4fdc2606048cf4d667853d809ad291ee6a15fd0a2f0ab67835ecc99c7"
+      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.2.0/pipeboard_darwin_arm64.tar.gz"
+      sha256 "ca1d3d2862e187c5fa1b53687b61cd46e2f887350643f75c645de4567aa69ec5"
 
       define_method(:install) do
         bin.install "pipeboard"
@@ -28,15 +28,15 @@ class Pipeboard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.1.0/pipeboard_linux_amd64.tar.gz"
-      sha256 "2fc1d61bc556a2cf330af9fe27607f44e4ee0220efaefecf40b44be4bef0464a"
+      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.2.0/pipeboard_linux_amd64.tar.gz"
+      sha256 "e01a7e8d8c9a27c0e0f62cf99156af296f9096dd3d5dba2c543312f3daaf6d66"
       define_method(:install) do
         bin.install "pipeboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.1.0/pipeboard_linux_arm64.tar.gz"
-      sha256 "26e400caf09e4543b3b2302da428574cec41a06048ceda893b7d233b19b899db"
+      url "https://github.com/pipeboard-co/pipeboard-cli/releases/download/v0.2.0/pipeboard_linux_arm64.tar.gz"
+      sha256 "d24977999727f3ab62871b6bae76adf28bce1501ce3bd61cc95dd9b6a867b63b"
       define_method(:install) do
         bin.install "pipeboard"
       end
